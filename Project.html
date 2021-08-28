@@ -1,0 +1,227 @@
+<!DOCTYPE.html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Javascript</title>
+		<link rel="stylesheet" href="Project.css">
+	</head>
+	<body>
+		<div class="content">
+			<div class="header">
+				<h1>JAVASCRIPT</h1>
+			</div>
+			<div class="main">
+				<script>document.write(Shuaib Ahmed)</script>
+				<script>
+					var a=100;
+					var b=25;
+					var sum=a+b;
+					var pro=a*b
+					document.write("The sum is:",sum," The product is:",pro)
+				</script>
+				<br>
+				<script>
+					console.time("Check Time")
+					var p=20;
+					var q=30;
+					var s=p+q;
+					console.log(s);
+					console.timeEnd("Check Time");
+				</script>
+				<script>
+					//arrays//
+					var x=[2,5,7];
+					document.write("The integer number:",x);
+					document.write("<br/>");
+					var y=[1,3,4,6]
+					document.write("The integer number:",y);
+					document.write("<br/>");
+				</script>
+				<script>
+					for(i=1; i<=10; i++){
+						document.write(i,"<br/>")
+					}
+				</script>
+				<input id="codeText" type="text"/>
+				<button onclick="checkcoding()">Check</button>
+				<div id="show"></div>
+				
+				<script>
+					function checkcoding(){
+						var txt;
+						var coding =document.getElementById("codeText").value;
+						
+					switch(coding) {
+						case "java":
+							txt = "Shuaib";
+							break;
+						case "php":
+							txt = "emon";
+							break;
+						case "c+":
+							txt = "Mrittunjoy";
+							break;
+						default:
+							txt = "unknown.....";
+						}
+					document.getElementById("show").innerHTML = txt;	
+					}
+				</script>
+				<script>
+					function checkcoding(){
+						console.log("Your event here..");
+					}
+				</script>
+				<section class="maincontent">
+					<div id="state">Shuaib</div>
+					<hr/>
+					<script>
+						var z=document.getElementById("state").innertext;
+						var z1=document.querySelector("div").innertext;
+						var z2=document.querySelectorAll("div")[0].innertext;
+						var z3=document.getElementsByTagName("div")[0].innertext;
+						
+						document.write(z,"<br/>",z1,"<br/>",z2,"<br/>",z3,"<br/>",)
+					</script>
+				</section>
+				<script>
+					function liveproject(){
+						var a=200;
+						this.x=400;
+						this.y=600;
+						this.z=function(){
+							return this.x+this.y;
+							}
+						}
+						var lp=new liveproject();
+						document.write(lp.z());
+				</script>
+			</div>
+			<div class="footer">
+				<h2>Learning and Earning</h2>
+			</div>
+		</div>
+		<div class="emon">
+			<script>
+				function totalNum(a){
+					x=20;
+					total = function (){
+						return x+a;
+						}
+					this.result=function(){
+						this.sum=total();
+						return "Result is"+this.sum;
+						}
+				
+				}
+				var tn = new totalNum(10);
+				console.log(tn.result());
+			</script>
+			<script>
+				function revMe(s){
+					return s.split("").reverse().join("");
+				}
+				var x = "A B C D";
+				var rv = revMe(x);
+				document.write(rv);
+			</script>
+			<script>
+				function myFunction() {
+					var str ="shuaib ahmed";
+					var res = str.substring(4, 6);
+					document.write(res);
+				}
+				myFunction();
+			</script>
+			<script>
+				var countdown;
+				var countdownnumber;
+				
+					function countdownInit(){
+						countdownnumber = 11;
+						countdownTrigger();
+					}
+				function countdownTrigger(){
+					if (countdownnumber>0){
+						countdownnumber-- ;
+						document.getElementById("show").innerHTML = countdownnumber;
+						if(countdownnumber>0){
+							countdown =setTimeout("countdownTrigger()", 1000);
+						}
+					}
+				}
+				function countdownClear(){
+					clearTimeout(countdown)
+					document.getElementById("show").innerHTML = "The countdown has been cleared" ;
+				}
+			</script>
+			<div>
+				<input type="button" value="Test Coundown" onclick="countdownInit()"/>
+				<input type="button" value="Clear Coundown" onclick="countdownClear()"/>
+			</div>
+			<div id="show"></div>
+			<script>
+				var i = 0;
+				var x = setInterval( function(){
+					i++;
+						alert("Javscript Fundamentals");
+						if (i == 2){
+							clearInterval(x);
+						}
+				},2000 )
+			</script>
+			<div>
+				<span id="hour"></span>
+				<span id="minute"></span>
+				<span id="second"></span>
+			</div>
+			<script>
+				function clock(){
+					var date = new Date();
+					
+					var hour = date.getHours();
+					var minute = date.getMinutes();
+					var second = date.getSeconds();
+				
+				document.getElementById("hour").innerHTML = hour;
+				document.getElementById("minute").innerHTML = minute;
+				document.getElementById("second").innerHTML = second;
+				}
+				setInterval(clock, 1000);
+			</script>
+			<div>
+				<button onclick="fadeOut()">Start</button>
+				<img src="shuaibs.jpg" id="myimage"/>
+			</div>
+			<script>
+				var element = document.getElementById("myimage");
+				var duration =1000;
+				var hidtime =1000;
+				var showtime = 1000;
+					function setOpacity(value){
+						element.style.opacity = value;
+					}  
+					function fadeOut(){
+						for(i=0; i<=1; i+=0.1){
+							setTimeout("setOpacity("+(1-i)+")", i*duration);
+						}
+						setTimeout("fadeIn()",(duration+hidtime));
+					}
+					function fadeIn(){
+						for(i=0; i<=1; i+=0.1){
+							setTimeout("setOpacity("+i+")", i*duration);
+						}
+						setTimeout("fadeOut()", (duration+showtime));
+					}
+			</script>
+			<div>
+				<button>
+			</div>
+			<script>
+				document.getElementById("hour").innerHTML = hour;
+				
+				
+			</script>
+		</div>
+	</body>
+</html>
